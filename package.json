@@ -1,0 +1,7 @@
+{
+  "name": "wave-portal",
+  "packageManager": "yarn@3.0.1",
+  "devDependencies": {
+    "hardhat": "^2.6.6"
+  }
+}
