@@ -5,19 +5,20 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 
 contract WavePortal {
-    uint256 totalWaves;
+    mapping(address => uint256) accounts;
 
     constructor() {
         console.log("Geat!! is a smart contract");
     }
 
     function wave() public {
-        totalWaves += 1;
         console.log("%s has waved!", msg.sender);
+        accounts[msg.sender] += 1;
     }
 
     function getTotalWaves() public view returns (uint256) {
-        console.log("We have %d total waves!", totalWaves);
+        uint256 totalWaves = accounts[msg.sender];
+        console.log("account: %s has %d waves", msg.sender, totalWaves);
         return totalWaves;
     }
 }
