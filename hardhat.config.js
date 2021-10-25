@@ -12,5 +12,10 @@ module.exports = {
       url: alchemy.url,
       accounts: [rinkeby.accountKey],
     },
+
+    localhost: {
+      chainId: 1337,
+      accounts: [rinkeby.accountKey],
+    },
   },
 }

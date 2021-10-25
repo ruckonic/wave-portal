@@ -12,6 +12,22 @@ async function main() {
   await portal.deployed()
 
   console.log('WavePortal address: ', portal.address)
+
+  // let waveCount = await portal.getTotalWaves()
+  // console.log('Wave count: ', waveCount.toNumber())
+
+  // let waveTXT = await portal.wave('Your welcome')
+  // await waveTXT.wait()
+
+  // let allWaves = await portal.getAllWaves()
+  // console.log({ allWaves })
+
+  // const [_, randomPerson] = await hre.ethers.getSigners()
+  // waveTXT = await portal.connect(randomPerson).wave('Another message!')
+  // await waveTXT.wait()
+
+  // allWaves = await portal.getAllWaves()
+  // console.log({ allWaves })
 }
 
 main()
