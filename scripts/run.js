@@ -8,7 +8,9 @@ async function main() {
   console.log('Owner balance: ', ownerBalance.toString())
 
   const Contract = await hre.ethers.getContractFactory('WavePortal')
-  const portal = await Contract.deploy()
+  const portal = await Contract.deploy({
+    value: hre.ethers.utils.parseEther('0.1'),
+  })
   await portal.deployed()
 
   console.log('WavePortal address: ', portal.address)
